@@ -1,0 +1,41 @@
+<html>
+<head>
+    <title>Weather App</title>
+    <style>
+        .container{
+            text-align: center;
+        }
+        input[type="text"]{
+            border: 1px;
+        }
+        input[type="submit"]{
+            border: none;
+            color: #1b6d85;
+            background-color: lightsteelblue;
+            width: 100px;
+            height: 35px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Find The Weather</h1>
+    <form method="GET">
+        <label for="city"></label>
+        <input type="text"  name="city" id="city" placeholder="city...">
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if weather %}
+        <h3>{{ weather.html_content }}</h3>
+<!--        <h3>{{ weather.daytime }}</h3>-->
+<!--        <h3>{{ weather.weather_stat }}</h3>-->
+<!--        <h3>{{ weather.temperature }}</h3>-->
+    {% endif %}
+</div>
+
+</body>
+</html>
